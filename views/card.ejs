@@ -1,0 +1,47 @@
+<% data.forEach(e =>{ 
+    if(e.status=="free"){%>
+
+<div class="card text-white bg-primary mt-2" style="max-width: 18rem; margin: auto;" id=<%=e.slotNo%>card>
+    <div class="card-header">
+        <h3>Slot <%=e.slotNo%></h3>
+    </div>
+    <div class="card-body">
+        <p class="card-text">You can park here</p>
+        <input type="password" id=pin<%=e.slotNo%> required>
+        <button type="button" class="btn btn-dark cardButton" id=<%=e.slotNo%>>Park Here</button>
+    </div>
+</div>
+<%}else if(e.status=="danger"){%>
+
+<div class="card text-white bg-danger mt-2" style="max-width: 18rem; margin: auto;" id=<%=e.slotNo%>card>
+    <div class="card-header">
+        <h3>Slot <%=e.slotNo%></h3>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Something went wrong</p>
+        <button type="button" class="btn btn-dark clearButton" id=<%=e.slotNo%> >Clear</button>
+    </div>
+</div>
+<%}else if(e.status=="reserved"){%>
+
+<div class="card text-white bg-success mt-2" style="max-width: 18rem; margin: auto;" id=<%=e.slotNo%>card>
+    <div class="card-header">
+        <h3>Slot <%=e.slotNo%></h3>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Someone Parked here</p>
+        <button type="button" class="btn btn-dark clearButton" id=<%=e.slotNo%> >Clear</button>
+    </div>
+</div>
+<%}else if(e.status=="waiting"){%>
+
+<div class="card text-white bg-warning mt-2" style="max-width: 18rem; margin: auto;" id=<%=e.slotNo%>card>
+    <div class="card-header">
+        <h3>Slot <%=e.slotNo%></h3>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Someone is going to park here</p>
+        <button type="button" class="btn btn-dark clearButton" id=<%=e.slotNo%> >Clear</button>
+    </div>
+</div>
+<% }}); %>
