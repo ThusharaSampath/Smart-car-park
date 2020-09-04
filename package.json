@@ -14,7 +14,7 @@
     "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
     "json-stringify-safe": "^5.0.1",
-    "mongodb": "^2.2.33",
+    "mongodb": "^3.1.13",
     "mongoose": "^5.9.1",
     "morgan": "~1.9.1",
     "mpg123": "^0.2.3",
